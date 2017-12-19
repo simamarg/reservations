@@ -8,7 +8,7 @@ var reservations = {
 
 var name = "";
 
-var claimReservation = function () {
+var claimReservation = function() {
   name = document.getElementById("userInput").value;
   var lowerCaseName = name.toLowerCase();
   var nameInReservations = Object.keys(reservations).filter(function(element) {return element.toLowerCase() === lowerCaseName});
@@ -24,4 +24,22 @@ var claimReservation = function () {
     reservations[name].claimed = true;
     document.getElementById("message").innerHTML = "Hello " + name + "! You now have a reservation. Take a seat";
   }
+  printReservationsList();
 };
+
+// Extension 2
+var printReservationsList = function() {
+  var keys = Object.keys(reservations);
+  var values = Object.values(reservations);
+  var list = "";
+  for (var i=0; i < keys.length; i++) {
+    if (values[i].claimed) {
+      list += keys[i] + " has a reservations and it's claimed<br>";
+    } else {
+      list += keys[i] + " has a reservations and it's claimed<br>";
+    }
+  }
+  document.getElementById("reservations-list").innerHTML = list;
+};
+
+printReservationsList();

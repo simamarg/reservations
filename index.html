@@ -3,12 +3,19 @@
 <head>
   <title></title>
 </head>
-<body>  
-  <form>
+<body>
+  <p>Plese enter your name to make a reservation.</p>  
+  <form style="display: inline;">
     Name: <input type="text" name="name" id="userInput">
   </form>
   <button onclick="claimReservation()">Make a Reservation</button>
-  <p id="message"></p>
+  
+  <div id="message"></div>
+  
+  <div>
+    <br>Reservations:
+    <div id="reservations-list"></div>
+  </div>
 
   <!-- <script src="exercises1-2.js"></script> -->
   <script src="extension1.js"></script>

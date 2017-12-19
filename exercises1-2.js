@@ -8,7 +8,7 @@ var reservations = {
   
   var name = prompt('Please enter the name for your reservation');
   
-  var claimReservation = function () {
+  var claimReservation = function() {
     var lowerCaseName = name.toLowerCase();
     var nameInReservations = Object.keys(reservations).filter(function(element) {return element.toLowerCase() === lowerCaseName});
     if (nameInReservations.length !== 0) {
