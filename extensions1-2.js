@@ -36,7 +36,7 @@ var printReservationsList = function() {
     if (values[i].claimed) {
       list += keys[i] + " has a reservations and it's claimed<br>";
     } else {
-      list += keys[i] + " has a reservations and it's claimed<br>";
+      list += keys[i] + " has a reservations and it's not claimed<br>";
     }
   }
   document.getElementById("reservations-list").innerHTML = list;
