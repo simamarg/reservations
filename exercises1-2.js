@@ -11,7 +11,7 @@ var reservations = {
   var claimReservation = function() {
     var lowerCaseName = name.toLowerCase();
     var nameInReservations = Object.keys(reservations).filter(function(element) {return element.toLowerCase() === lowerCaseName});
-    if (nameInReservations.length !== 0) {
+    if (nameInReservations.length) {
       if (reservations[nameInReservations[0]].claimed) {
         alert("Hello " + name + ", your reservation is already claimed");
       } else {
