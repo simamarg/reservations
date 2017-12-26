@@ -6,10 +6,12 @@ var reservations = {
   'Ted': { claimed: true }
 }
 
-var name = "";
+var makeReservation = function() {
+    var clientName = document.getElementById("userInput").value;
+    claimReservation(clientName);
+};
 
-var claimReservation = function() {
-  name = document.getElementById("userInput").value;
+var claimReservation = function(name) {
   var lowerCaseName = name.toLowerCase();
   var nameInReservations = Object.keys(reservations).filter(function(element) {return element.toLowerCase() === lowerCaseName});
   if (nameInReservations.length) {
